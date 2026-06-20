@@ -1,0 +1,57 @@
+services:
+  redpanda:
+    image: redpandadata/redpanda:latest
+    container_name: flowlog-redpanda
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp=1
+      - --memory=512M
+      - --reserve-memory=0M
+      - --node-id=0
+      - --check=false
+      - --kafka-addr=PLAINTEXT://0.0.0.0:9092
+      - --advertise-kafka-addr=PLAINTEXT://redpanda:9092
+    ports:
+      - "9092:9092"
+      - "9644:9644"
+    volumes:
+      - redpanda_data:/var/lib/redpanda/data
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: flowlog-clickhouse
+    environment:
+      CLICKHOUSE_DB: flowlog
+      CLICKHOUSE_USER: flowlog
+      CLICKHOUSE_PASSWORD: flowlog
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./database/clickhouse_init.sql:/docker-entrypoint-initdb.d/clickhouse_init.sql
+
+  api:
+    build: ./api-service
+    container_name: flowlog-api
+    environment:
+      CLICKHOUSE_HOST: clickhouse
+      CLICKHOUSE_PORT: 8123
+      CLICKHOUSE_USER: flowlog
+      CLICKHOUSE_PASSWORD: flowlog
+      CLICKHOUSE_DATABASE: flowlog
+      KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+      FLOW_TOPIC: flows.normalized
+      DEAD_LETTER_TOPIC: flows.dead_letter
+    ports:
+      - "8000:8000"
+    depends_on:
+      - clickhouse
+      - redpanda
+
+volumes:
+  redpanda_data:
+  clickhouse_data:
+
