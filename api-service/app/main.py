@@ -4,6 +4,9 @@ from confluent_kafka.admin import AdminClient, NewTopic
 from .clickhouse import get_client, ping_clickhouse
 from .config import KAFKA_BOOTSTRAP_SERVERS, FLOW_TOPIC, DEAD_LETTER_TOPIC
 
+from typing import List
+from .schemas import NormalizedFlowIn, IngestResponse
+from .producer import produce_flow, flush_producer
 
 app = FastAPI(
     title="FlowLog Backend API",
@@ -168,3 +171,18 @@ def top_ports(limit: int = 10):
     items = [dict(zip(columns, row)) for row in rows.result_rows]
 
     return {"items": items}
+
+@app.post("/api/v1/ingest/flows", response_model=IngestResponse)
+def ingest_flows(flows: List[NormalizedFlowIn]):
+    for flow in flows:
+        data = flow.model_dump()
+        data["protocol"] = data["protocol"].upper()
+        produce_flow(data)
+
+    flush_producer()
+
+    return IngestResponse(
+        status="accepted",
+        count=len(flows),
+        topic=FLOW_TOPIC,
+    )
