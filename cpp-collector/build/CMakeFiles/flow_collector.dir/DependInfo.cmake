@@ -4,13 +4,27 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/quang/flowlog-system/cpp-collector/src/collectors/FakeCollector.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o"
   "/home/quang/flowlog-system/cpp-collector/src/main.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/main.cpp.o"
+  "/home/quang/flowlog-system/cpp-collector/src/model/NormalizedFlow.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o"
+  "/home/quang/flowlog-system/cpp-collector/src/sinks/HttpSink.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "QT_CORE_LIB"
+  "QT_NETWORK_LIB"
+  "QT_NO_DEBUG"
+  )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
+  "/usr/include/x86_64-linux-gnu/qt5"
+  "/usr/include/x86_64-linux-gnu/qt5/QtCore"
+  "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"
+  "/usr/include/x86_64-linux-gnu/qt5/QtNetwork"
   )
 
 # Targets to which this target links.

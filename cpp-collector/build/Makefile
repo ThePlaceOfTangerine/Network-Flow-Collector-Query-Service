@@ -123,6 +123,33 @@ flow_collector/fast:
 	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/build
 .PHONY : flow_collector/fast
 
+src/collectors/FakeCollector.o: src/collectors/FakeCollector.cpp.o
+
+.PHONY : src/collectors/FakeCollector.o
+
+# target to build an object file
+src/collectors/FakeCollector.cpp.o:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o
+.PHONY : src/collectors/FakeCollector.cpp.o
+
+src/collectors/FakeCollector.i: src/collectors/FakeCollector.cpp.i
+
+.PHONY : src/collectors/FakeCollector.i
+
+# target to preprocess a source file
+src/collectors/FakeCollector.cpp.i:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.i
+.PHONY : src/collectors/FakeCollector.cpp.i
+
+src/collectors/FakeCollector.s: src/collectors/FakeCollector.cpp.s
+
+.PHONY : src/collectors/FakeCollector.s
+
+# target to generate assembly for a file
+src/collectors/FakeCollector.cpp.s:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.s
+.PHONY : src/collectors/FakeCollector.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -150,6 +177,60 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/model/NormalizedFlow.o: src/model/NormalizedFlow.cpp.o
+
+.PHONY : src/model/NormalizedFlow.o
+
+# target to build an object file
+src/model/NormalizedFlow.cpp.o:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o
+.PHONY : src/model/NormalizedFlow.cpp.o
+
+src/model/NormalizedFlow.i: src/model/NormalizedFlow.cpp.i
+
+.PHONY : src/model/NormalizedFlow.i
+
+# target to preprocess a source file
+src/model/NormalizedFlow.cpp.i:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.i
+.PHONY : src/model/NormalizedFlow.cpp.i
+
+src/model/NormalizedFlow.s: src/model/NormalizedFlow.cpp.s
+
+.PHONY : src/model/NormalizedFlow.s
+
+# target to generate assembly for a file
+src/model/NormalizedFlow.cpp.s:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.s
+.PHONY : src/model/NormalizedFlow.cpp.s
+
+src/sinks/HttpSink.o: src/sinks/HttpSink.cpp.o
+
+.PHONY : src/sinks/HttpSink.o
+
+# target to build an object file
+src/sinks/HttpSink.cpp.o:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o
+.PHONY : src/sinks/HttpSink.cpp.o
+
+src/sinks/HttpSink.i: src/sinks/HttpSink.cpp.i
+
+.PHONY : src/sinks/HttpSink.i
+
+# target to preprocess a source file
+src/sinks/HttpSink.cpp.i:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.i
+.PHONY : src/sinks/HttpSink.cpp.i
+
+src/sinks/HttpSink.s: src/sinks/HttpSink.cpp.s
+
+.PHONY : src/sinks/HttpSink.s
+
+# target to generate assembly for a file
+src/sinks/HttpSink.cpp.s:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.s
+.PHONY : src/sinks/HttpSink.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... flow_collector"
+	@echo "... src/collectors/FakeCollector.o"
+	@echo "... src/collectors/FakeCollector.i"
+	@echo "... src/collectors/FakeCollector.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/model/NormalizedFlow.o"
+	@echo "... src/model/NormalizedFlow.i"
+	@echo "... src/model/NormalizedFlow.s"
+	@echo "... src/sinks/HttpSink.o"
+	@echo "... src/sinks/HttpSink.i"
+	@echo "... src/sinks/HttpSink.s"
 .PHONY : help
 
 

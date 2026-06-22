@@ -1,79 +1,51 @@
-#include <chrono>
-#include <iostream>
-#include <memory>
-#include <string>
-#include <thread>
-#include <vector>
+#include <QCoreApplication>
+#include <QCommandLineParser>
+#include <QDebug>
 
-#include "model/NormalizedFlow.hpp"
 #include "sinks/HttpSink.hpp"
+#include "collectors/FakeCollector.hpp"
 
-std::string now_iso() {
-    return "2026-06-21T10:00:00";
-}
+int main(int argc, char *argv[]) {
+    QCoreApplication app(argc, argv);
 
-NormalizedFlow make_fake_flow(int i) {
-    NormalizedFlow f;
+    QCoreApplication::setApplicationName("flowlog-qt-collector");
+    QCoreApplication::setApplicationVersion("0.1.0");
 
-    f.event_id = "cpp-fake-" + std::to_string(i);
-    f.source_type = "cpp_fake_collector";
-    f.sensor_id = "cpp-collector-01";
+    QCommandLineParser parser;
+    parser.setApplicationDescription("Qt-based C++ collector for FlowLog system");
+    parser.addHelpOption();
+    parser.addVersionOption();
 
-    f.src_ip = "10.0.0." + std::to_string((i % 250) + 1);
-    f.dst_ip = "8.8.8.8";
+    QCommandLineOption countOption(
+        QStringList() << "c" << "count",
+        "Number of fake flows to generate.",
+        "count",
+        "10"
+    );
 
-    f.src_port = 10000 + i;
-    f.dst_port = 53;
+    QCommandLineOption endpointOption(
+        QStringList() << "e" << "endpoint",
+        "REST ingest endpoint.",
+        "endpoint",
+        "http://localhost:8000/api/v1/ingest/flows"
+    );
 
-    f.protocol = "UDP";
-    f.bytes = 100 + i;
-    f.packets = 2;
+    parser.addOption(countOption);
+    parser.addOption(endpointOption);
 
-    f.start_time = now_iso();
-    f.end_time = now_iso();
-    f.duration = 0.1;
+    parser.process(app);
 
-    f.app_protocol = "dns";
-    f.tcp_flags = "";
+    int count = parser.value(countOption).toInt();
+    QString endpoint = parser.value(endpointOption);
 
-    f.raw = {
-        {"generator", "cpp_fake_collector"},
-        {"index", i}
-    };
-
-    return f;
-}
-
-int main(int argc, char* argv[]) {
-    std::string endpoint = "http://localhost:8000/api/v1/ingest/flows";
-    int count = 10;
-
-    if (argc >= 2) {
-        count = std::stoi(argv[1]);
-    }
-
-    if (argc >= 3) {
-        endpoint = argv[2];
-    }
-
-    std::cout << "FlowLog C++ Collector Skeleton\n";
-    std::cout << "Sending " << count << " fake flows to " << endpoint << "\n";
+    qInfo() << "FlowLog Qt C++ Collector";
+    qInfo() << "count =" << count;
+    qInfo() << "endpoint =" << endpoint;
 
     HttpSink sink(endpoint);
+    FakeCollector collector(sink, count);
 
-    std::vector<NormalizedFlow> batch;
+    collector.run();
 
-    for (int i = 0; i < count; ++i) {
-        batch.push_back(make_fake_flow(i));
-    }
-
-    bool ok = sink.send_batch(batch);
-
-    if (!ok) {
-        std::cerr << "Failed to publish fake flows\n";
-        return 1;
-    }
-
-    std::cout << "Done\n";
     return 0;
 }

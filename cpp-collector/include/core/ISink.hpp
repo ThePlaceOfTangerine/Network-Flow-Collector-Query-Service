@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>
+#include <QVector>
 #include "model/NormalizedFlow.hpp"
 
 class ISink {
@@ -9,7 +9,7 @@ public:
 
     virtual bool send(const NormalizedFlow& flow) = 0;
 
-    virtual bool send_batch(const std::vector<NormalizedFlow>& flows) {
+    virtual bool sendBatch(const QVector<NormalizedFlow>& flows) {
         for (const auto& flow : flows) {
             if (!send(flow)) {
                 return false;

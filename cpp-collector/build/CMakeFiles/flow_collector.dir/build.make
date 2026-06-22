@@ -70,18 +70,64 @@ CMakeFiles/flow_collector.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flow_collector.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/flowlog-system/cpp-collector/src/main.cpp -o CMakeFiles/flow_collector.dir/src/main.cpp.s
 
+CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o: CMakeFiles/flow_collector.dir/flags.make
+CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o: ../src/model/NormalizedFlow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o -c /home/quang/flowlog-system/cpp-collector/src/model/NormalizedFlow.cpp
+
+CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/flowlog-system/cpp-collector/src/model/NormalizedFlow.cpp > CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.i
+
+CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/flowlog-system/cpp-collector/src/model/NormalizedFlow.cpp -o CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.s
+
+CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o: CMakeFiles/flow_collector.dir/flags.make
+CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o: ../src/sinks/HttpSink.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o -c /home/quang/flowlog-system/cpp-collector/src/sinks/HttpSink.cpp
+
+CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/flowlog-system/cpp-collector/src/sinks/HttpSink.cpp > CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.i
+
+CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/flowlog-system/cpp-collector/src/sinks/HttpSink.cpp -o CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.s
+
+CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o: CMakeFiles/flow_collector.dir/flags.make
+CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o: ../src/collectors/FakeCollector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o -c /home/quang/flowlog-system/cpp-collector/src/collectors/FakeCollector.cpp
+
+CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/flowlog-system/cpp-collector/src/collectors/FakeCollector.cpp > CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.i
+
+CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/flowlog-system/cpp-collector/src/collectors/FakeCollector.cpp -o CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.s
+
 # Object files for target flow_collector
 flow_collector_OBJECTS = \
-"CMakeFiles/flow_collector.dir/src/main.cpp.o"
+"CMakeFiles/flow_collector.dir/src/main.cpp.o" \
+"CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o" \
+"CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o" \
+"CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o"
 
 # External object files for target flow_collector
 flow_collector_EXTERNAL_OBJECTS =
 
 flow_collector: CMakeFiles/flow_collector.dir/src/main.cpp.o
+flow_collector: CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o
+flow_collector: CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o
+flow_collector: CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o
 flow_collector: CMakeFiles/flow_collector.dir/build.make
-flow_collector: /usr/lib/x86_64-linux-gnu/libcurl.so
+flow_collector: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
+flow_collector: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 flow_collector: CMakeFiles/flow_collector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable flow_collector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable flow_collector"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/flow_collector.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
