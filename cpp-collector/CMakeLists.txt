@@ -18,7 +18,11 @@ add_executable(flow_collector
     src/collectors/FileCollector.cpp
 
     src/parsers/ZeekParser.cpp
-    src/parsers/SuricataParser.cpp)
+    src/parsers/SuricataParser.cpp
+
+    src/collectors/NetflowUdpCollector.cpp
+    src/parsers/NetflowV5Parser.cpp
+)
 
 target_include_directories(flow_collector PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/include

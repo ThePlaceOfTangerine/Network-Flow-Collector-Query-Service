@@ -26,6 +26,18 @@ core/ICollector.hpp
 core/ISink.hpp
 ../include/collectors/core/ISink.hpp
 
+../include/collectors/NetflowUdpCollector.hpp
+QObject
+-
+QUdpSocket
+-
+core/ICollector.hpp
+../include/collectors/core/ICollector.hpp
+core/ISink.hpp
+../include/collectors/core/ISink.hpp
+parsers/NetflowV5Parser.hpp
+../include/collectors/parsers/NetflowV5Parser.hpp
+
 ../include/core/ICollector.hpp
 
 ../include/core/ISink.hpp
@@ -38,6 +50,14 @@ model/NormalizedFlow.hpp
 QString
 -
 QJsonObject
+-
+
+../include/parsers/NetflowV5Parser.hpp
+QByteArray
+-
+QVector
+-
+model/NormalizedFlow.hpp
 -
 
 ../include/parsers/SuricataParser.hpp
@@ -92,6 +112,18 @@ parsers/SuricataParser.hpp
 model/NormalizedFlow.hpp
 /home/quang/flowlog-system/cpp-collector/src/collectors/model/NormalizedFlow.hpp
 
+/home/quang/flowlog-system/cpp-collector/src/collectors/NetflowUdpCollector.cpp
+collectors/NetflowUdpCollector.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/collectors/NetflowUdpCollector.hpp
+QCoreApplication
+-
+QHostAddress
+-
+QNetworkDatagram
+-
+QDebug
+-
+
 /home/quang/flowlog-system/cpp-collector/src/main.cpp
 QCoreApplication
 -
@@ -105,10 +137,20 @@ collectors/FakeCollector.hpp
 /home/quang/flowlog-system/cpp-collector/src/collectors/FakeCollector.hpp
 collectors/FileCollector.hpp
 /home/quang/flowlog-system/cpp-collector/src/collectors/FileCollector.hpp
+collectors/NetflowUdpCollector.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/NetflowUdpCollector.hpp
 
 /home/quang/flowlog-system/cpp-collector/src/model/NormalizedFlow.cpp
 model/NormalizedFlow.hpp
 /home/quang/flowlog-system/cpp-collector/src/model/model/NormalizedFlow.hpp
+
+/home/quang/flowlog-system/cpp-collector/src/parsers/NetflowV5Parser.cpp
+parsers/NetflowV5Parser.hpp
+/home/quang/flowlog-system/cpp-collector/src/parsers/parsers/NetflowV5Parser.hpp
+QJsonObject
+-
+QString
+-
 
 /home/quang/flowlog-system/cpp-collector/src/parsers/SuricataParser.cpp
 parsers/SuricataParser.hpp
@@ -143,6 +185,10 @@ QNetworkRequest
 -
 QDebug
 -
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QByteArray
+qbytearray.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QCommandLineParser
 qcommandlineparser.h
@@ -954,9 +1000,17 @@ QtCore/qpoint.h
 QtCore/qglobal.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/QHostAddress
+qhostaddress.h
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkAccessManager
 qnetworkaccessmanager.h
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkaccessmanager.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkDatagram
+qnetworkdatagram.h
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkdatagram.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkReply
 qnetworkreply.h
@@ -974,6 +1028,10 @@ qsslconfiguration.h
 qsslpresharedkeyauthenticator.h
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslpresharedkeyauthenticator.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/QUdpSocket
+qudpsocket.h
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/qudpsocket.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h
 QtNetwork/qtnetworkglobal.h
 -
@@ -982,6 +1040,18 @@ QtCore/qiodevice.h
 QtCore/qobject.h
 -
 QtCore/qdebug.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h
+QtNetwork/qtnetworkglobal.h
+-
+QtCore/qpair.h
+-
+QtCore/qstring.h
+-
+QtCore/qshareddata.h
+-
+QtNetwork/qabstractsocket.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkaccessmanager.h
@@ -998,6 +1068,12 @@ QtCore/QObject
 QtNetwork/QSslConfiguration
 -
 QtNetwork/QSslPreSharedKeyAuthenticator
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkdatagram.h
+QtCore/qbytearray.h
+-
+QtNetwork/qhostaddress.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkreply.h
@@ -1108,5 +1184,13 @@ QtCore/qvariant.h
 QtCore/qglobal.h
 -
 QtNetwork/qtnetwork-config.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtNetwork/qudpsocket.h
+QtNetwork/qtnetworkglobal.h
+-
+QtNetwork/qabstractsocket.h
+-
+QtNetwork/qhostaddress.h
 -
 

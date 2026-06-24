@@ -148,6 +148,32 @@ CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/flowlog-system/cpp-collector/src/parsers/SuricataParser.cpp -o CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.s
 
+CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.o: CMakeFiles/flow_collector.dir/flags.make
+CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.o: ../src/collectors/NetflowUdpCollector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.o -c /home/quang/flowlog-system/cpp-collector/src/collectors/NetflowUdpCollector.cpp
+
+CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/flowlog-system/cpp-collector/src/collectors/NetflowUdpCollector.cpp > CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.i
+
+CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/flowlog-system/cpp-collector/src/collectors/NetflowUdpCollector.cpp -o CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.s
+
+CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.o: CMakeFiles/flow_collector.dir/flags.make
+CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.o: ../src/parsers/NetflowV5Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.o -c /home/quang/flowlog-system/cpp-collector/src/parsers/NetflowV5Parser.cpp
+
+CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quang/flowlog-system/cpp-collector/src/parsers/NetflowV5Parser.cpp > CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.i
+
+CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quang/flowlog-system/cpp-collector/src/parsers/NetflowV5Parser.cpp -o CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.s
+
 # Object files for target flow_collector
 flow_collector_OBJECTS = \
 "CMakeFiles/flow_collector.dir/src/main.cpp.o" \
@@ -156,7 +182,9 @@ flow_collector_OBJECTS = \
 "CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o" \
 "CMakeFiles/flow_collector.dir/src/collectors/FileCollector.cpp.o" \
 "CMakeFiles/flow_collector.dir/src/parsers/ZeekParser.cpp.o" \
-"CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.o"
+"CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.o" \
+"CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.o" \
+"CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.o"
 
 # External object files for target flow_collector
 flow_collector_EXTERNAL_OBJECTS =
@@ -168,11 +196,13 @@ flow_collector: CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o
 flow_collector: CMakeFiles/flow_collector.dir/src/collectors/FileCollector.cpp.o
 flow_collector: CMakeFiles/flow_collector.dir/src/parsers/ZeekParser.cpp.o
 flow_collector: CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.o
+flow_collector: CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.o
+flow_collector: CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.o
 flow_collector: CMakeFiles/flow_collector.dir/build.make
 flow_collector: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 flow_collector: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 flow_collector: CMakeFiles/flow_collector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable flow_collector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable flow_collector"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/flow_collector.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
