@@ -74,12 +74,12 @@ clean: CMakeFiles/flow_collector.dir/clean
 CMakeFiles/flow_collector.dir/all:
 	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/depend
 	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target flow_collector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/quang/flowlog-system/cpp-collector/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target flow_collector"
 .PHONY : CMakeFiles/flow_collector.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/flow_collector.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/quang/flowlog-system/cpp-collector/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/quang/flowlog-system/cpp-collector/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/flow_collector.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/quang/flowlog-system/cpp-collector/build/CMakeFiles 0
 .PHONY : CMakeFiles/flow_collector.dir/rule

@@ -1,0 +1,2 @@
+{"ts":1710000000.123,"uid":"Cx1","id.orig_h":"192.168.1.10","id.orig_p":51514,"id.resp_h":"8.8.8.8","id.resp_p":53,"proto":"udp","service":"dns","duration":0.05,"orig_bytes":80,"resp_bytes":120,"orig_pkts":1,"resp_pkts":1}
+{"ts":1710000001.456,"uid":"Cx2","id.orig_h":"192.168.1.20","id.orig_p":44321,"id.resp_h":"1.1.1.1","id.resp_p":443,"proto":"tcp","service":"ssl","duration":1.2,"orig_bytes":500,"resp_bytes":3000,"orig_pkts":5,"resp_pkts":8}

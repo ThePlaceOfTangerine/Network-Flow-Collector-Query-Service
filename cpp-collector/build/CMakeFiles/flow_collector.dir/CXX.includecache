@@ -18,6 +18,14 @@ core/ISink.hpp
 model/NormalizedFlow.hpp
 ../include/collectors/model/NormalizedFlow.hpp
 
+../include/collectors/FileCollector.hpp
+QString
+-
+core/ICollector.hpp
+../include/collectors/core/ICollector.hpp
+core/ISink.hpp
+../include/collectors/core/ISink.hpp
+
 ../include/core/ICollector.hpp
 
 ../include/core/ISink.hpp
@@ -31,6 +39,18 @@ QString
 -
 QJsonObject
 -
+
+../include/parsers/SuricataParser.hpp
+QString
+-
+model/NormalizedFlow.hpp
+../include/parsers/model/NormalizedFlow.hpp
+
+../include/parsers/ZeekParser.hpp
+QString
+-
+model/NormalizedFlow.hpp
+../include/parsers/model/NormalizedFlow.hpp
 
 ../include/sinks/HttpSink.hpp
 QObject
@@ -54,6 +74,24 @@ collectors/FakeCollector.hpp
 QJsonObject
 -
 
+/home/quang/flowlog-system/cpp-collector/src/collectors/FileCollector.cpp
+collectors/FileCollector.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/collectors/FileCollector.hpp
+QFile
+-
+QTextStream
+-
+QVector
+-
+QDebug
+-
+parsers/ZeekParser.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/parsers/ZeekParser.hpp
+parsers/SuricataParser.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/parsers/SuricataParser.hpp
+model/NormalizedFlow.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/model/NormalizedFlow.hpp
+
 /home/quang/flowlog-system/cpp-collector/src/main.cpp
 QCoreApplication
 -
@@ -65,10 +103,32 @@ sinks/HttpSink.hpp
 /home/quang/flowlog-system/cpp-collector/src/sinks/HttpSink.hpp
 collectors/FakeCollector.hpp
 /home/quang/flowlog-system/cpp-collector/src/collectors/FakeCollector.hpp
+collectors/FileCollector.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/FileCollector.hpp
 
 /home/quang/flowlog-system/cpp-collector/src/model/NormalizedFlow.cpp
 model/NormalizedFlow.hpp
 /home/quang/flowlog-system/cpp-collector/src/model/model/NormalizedFlow.hpp
+
+/home/quang/flowlog-system/cpp-collector/src/parsers/SuricataParser.cpp
+parsers/SuricataParser.hpp
+/home/quang/flowlog-system/cpp-collector/src/parsers/parsers/SuricataParser.hpp
+QJsonDocument
+-
+QJsonObject
+-
+QJsonParseError
+-
+
+/home/quang/flowlog-system/cpp-collector/src/parsers/ZeekParser.cpp
+parsers/ZeekParser.hpp
+/home/quang/flowlog-system/cpp-collector/src/parsers/parsers/ZeekParser.hpp
+QJsonDocument
+-
+QJsonObject
+-
+QJsonParseError
+-
 
 /home/quang/flowlog-system/cpp-collector/src/sinks/HttpSink.cpp
 sinks/HttpSink.hpp
@@ -100,6 +160,10 @@ qdebug.h
 qeventloop.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
+qfile.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
 qflags.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
@@ -120,6 +184,10 @@ qjsondocument.h
 qjsonobject.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonParseError
+qjsondocument.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType
 qmetatype.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
@@ -135,6 +203,10 @@ qshareddata.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 qstring.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+qtextstream.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
 qurl.h
@@ -326,6 +398,20 @@ utility
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
 QtCore/qobject.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+QtCore/qfiledevice.h
+-
+QtCore/qstring.h
+-
+stdio.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+QtCore/qiodevice.h
+-
+QtCore/qstring.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h

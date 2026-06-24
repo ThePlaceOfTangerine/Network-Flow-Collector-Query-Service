@@ -5,8 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/quang/flowlog-system/cpp-collector/src/collectors/FakeCollector.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o"
+  "/home/quang/flowlog-system/cpp-collector/src/collectors/FileCollector.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/collectors/FileCollector.cpp.o"
   "/home/quang/flowlog-system/cpp-collector/src/main.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/main.cpp.o"
   "/home/quang/flowlog-system/cpp-collector/src/model/NormalizedFlow.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o"
+  "/home/quang/flowlog-system/cpp-collector/src/parsers/SuricataParser.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.o"
+  "/home/quang/flowlog-system/cpp-collector/src/parsers/ZeekParser.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/parsers/ZeekParser.cpp.o"
   "/home/quang/flowlog-system/cpp-collector/src/sinks/HttpSink.cpp" "/home/quang/flowlog-system/cpp-collector/build/CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

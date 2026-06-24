@@ -4,23 +4,38 @@
 
 #include "sinks/HttpSink.hpp"
 #include "collectors/FakeCollector.hpp"
+#include "collectors/FileCollector.hpp"
 
 int main(int argc, char *argv[]) {
     QCoreApplication app(argc, argv);
 
     QCoreApplication::setApplicationName("flowlog-qt-collector");
-    QCoreApplication::setApplicationVersion("0.1.0");
+    QCoreApplication::setApplicationVersion("0.2.0");
 
     QCommandLineParser parser;
     parser.setApplicationDescription("Qt-based C++ collector for FlowLog system");
     parser.addHelpOption();
     parser.addVersionOption();
 
+    QCommandLineOption modeOption(
+        QStringList() << "m" << "mode",
+        "Collector mode: fake, zeek, suricata.",
+        "mode",
+        "fake"
+    );
+
     QCommandLineOption countOption(
         QStringList() << "c" << "count",
         "Number of fake flows to generate.",
         "count",
         "10"
+    );
+
+    QCommandLineOption fileOption(
+        QStringList() << "f" << "file",
+        "Input log file path for zeek/suricata mode.",
+        "file",
+        ""
     );
 
     QCommandLineOption endpointOption(
@@ -30,22 +45,52 @@ int main(int argc, char *argv[]) {
         "http://localhost:8000/api/v1/ingest/flows"
     );
 
+    parser.addOption(modeOption);
     parser.addOption(countOption);
+    parser.addOption(fileOption);
     parser.addOption(endpointOption);
 
     parser.process(app);
 
+    QString mode = parser.value(modeOption);
     int count = parser.value(countOption).toInt();
+    QString filePath = parser.value(fileOption);
     QString endpoint = parser.value(endpointOption);
 
     qInfo() << "FlowLog Qt C++ Collector";
-    qInfo() << "count =" << count;
+    qInfo() << "mode =" << mode;
     qInfo() << "endpoint =" << endpoint;
 
     HttpSink sink(endpoint);
-    FakeCollector collector(sink, count);
 
-    collector.run();
+    if (mode == "fake") {
+        FakeCollector collector(sink, count);
+        collector.run();
+        return 0;
+    }
 
-    return 0;
+    if (mode == "zeek") {
+        if (filePath.isEmpty()) {
+            qWarning() << "Missing --file for zeek mode";
+            return 1;
+        }
+
+        FileCollector collector(filePath, FileCollector::Format::Zeek, sink);
+        collector.run();
+        return 0;
+    }
+
+    if (mode == "suricata") {
+        if (filePath.isEmpty()) {
+            qWarning() << "Missing --file for suricata mode";
+            return 1;
+        }
+
+        FileCollector collector(filePath, FileCollector::Format::Suricata, sink);
+        collector.run();
+        return 0;
+    }
+
+    qWarning() << "Unknown mode:" << mode;
+    return 1;
 }

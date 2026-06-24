@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.o"
+  "CMakeFiles/flow_collector.dir/src/collectors/FileCollector.cpp.o"
   "CMakeFiles/flow_collector.dir/src/main.cpp.o"
   "CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.o"
+  "CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.o"
+  "CMakeFiles/flow_collector.dir/src/parsers/ZeekParser.cpp.o"
   "CMakeFiles/flow_collector.dir/src/sinks/HttpSink.cpp.o"
   "flow_collector"
   "flow_collector.pdb"

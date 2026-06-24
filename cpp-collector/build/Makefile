@@ -150,6 +150,33 @@ src/collectors/FakeCollector.cpp.s:
 	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/FakeCollector.cpp.s
 .PHONY : src/collectors/FakeCollector.cpp.s
 
+src/collectors/FileCollector.o: src/collectors/FileCollector.cpp.o
+
+.PHONY : src/collectors/FileCollector.o
+
+# target to build an object file
+src/collectors/FileCollector.cpp.o:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/FileCollector.cpp.o
+.PHONY : src/collectors/FileCollector.cpp.o
+
+src/collectors/FileCollector.i: src/collectors/FileCollector.cpp.i
+
+.PHONY : src/collectors/FileCollector.i
+
+# target to preprocess a source file
+src/collectors/FileCollector.cpp.i:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/FileCollector.cpp.i
+.PHONY : src/collectors/FileCollector.cpp.i
+
+src/collectors/FileCollector.s: src/collectors/FileCollector.cpp.s
+
+.PHONY : src/collectors/FileCollector.s
+
+# target to generate assembly for a file
+src/collectors/FileCollector.cpp.s:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/FileCollector.cpp.s
+.PHONY : src/collectors/FileCollector.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -204,6 +231,60 @@ src/model/NormalizedFlow.cpp.s:
 	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/model/NormalizedFlow.cpp.s
 .PHONY : src/model/NormalizedFlow.cpp.s
 
+src/parsers/SuricataParser.o: src/parsers/SuricataParser.cpp.o
+
+.PHONY : src/parsers/SuricataParser.o
+
+# target to build an object file
+src/parsers/SuricataParser.cpp.o:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.o
+.PHONY : src/parsers/SuricataParser.cpp.o
+
+src/parsers/SuricataParser.i: src/parsers/SuricataParser.cpp.i
+
+.PHONY : src/parsers/SuricataParser.i
+
+# target to preprocess a source file
+src/parsers/SuricataParser.cpp.i:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.i
+.PHONY : src/parsers/SuricataParser.cpp.i
+
+src/parsers/SuricataParser.s: src/parsers/SuricataParser.cpp.s
+
+.PHONY : src/parsers/SuricataParser.s
+
+# target to generate assembly for a file
+src/parsers/SuricataParser.cpp.s:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/SuricataParser.cpp.s
+.PHONY : src/parsers/SuricataParser.cpp.s
+
+src/parsers/ZeekParser.o: src/parsers/ZeekParser.cpp.o
+
+.PHONY : src/parsers/ZeekParser.o
+
+# target to build an object file
+src/parsers/ZeekParser.cpp.o:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/ZeekParser.cpp.o
+.PHONY : src/parsers/ZeekParser.cpp.o
+
+src/parsers/ZeekParser.i: src/parsers/ZeekParser.cpp.i
+
+.PHONY : src/parsers/ZeekParser.i
+
+# target to preprocess a source file
+src/parsers/ZeekParser.cpp.i:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/ZeekParser.cpp.i
+.PHONY : src/parsers/ZeekParser.cpp.i
+
+src/parsers/ZeekParser.s: src/parsers/ZeekParser.cpp.s
+
+.PHONY : src/parsers/ZeekParser.s
+
+# target to generate assembly for a file
+src/parsers/ZeekParser.cpp.s:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/ZeekParser.cpp.s
+.PHONY : src/parsers/ZeekParser.cpp.s
+
 src/sinks/HttpSink.o: src/sinks/HttpSink.cpp.o
 
 .PHONY : src/sinks/HttpSink.o
@@ -243,12 +324,21 @@ help:
 	@echo "... src/collectors/FakeCollector.o"
 	@echo "... src/collectors/FakeCollector.i"
 	@echo "... src/collectors/FakeCollector.s"
+	@echo "... src/collectors/FileCollector.o"
+	@echo "... src/collectors/FileCollector.i"
+	@echo "... src/collectors/FileCollector.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/model/NormalizedFlow.o"
 	@echo "... src/model/NormalizedFlow.i"
 	@echo "... src/model/NormalizedFlow.s"
+	@echo "... src/parsers/SuricataParser.o"
+	@echo "... src/parsers/SuricataParser.i"
+	@echo "... src/parsers/SuricataParser.s"
+	@echo "... src/parsers/ZeekParser.o"
+	@echo "... src/parsers/ZeekParser.i"
+	@echo "... src/parsers/ZeekParser.s"
 	@echo "... src/sinks/HttpSink.o"
 	@echo "... src/sinks/HttpSink.i"
 	@echo "... src/sinks/HttpSink.s"
