@@ -37,3 +37,20 @@ Redpanda topic: flows.normalized
 Ingestion Worker
     ↓
 ClickHouse
+
+
+
+## Query Benchmark
+
+Command:
+
+```bash
+python3 scripts/benchmark_query.py --rounds 10
+
+Result:
+
+Endpoint				Average Latency
+/api/v1/flows?limit=100			0.0237s
+/api/v1/stats/top-talkers		0.0229s
+/api/v1/stats/top-ports			0.0271s
+/metrics				0.0201s

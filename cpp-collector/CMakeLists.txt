@@ -16,12 +16,13 @@ add_executable(flow_collector
 
     src/collectors/FakeCollector.cpp
     src/collectors/FileCollector.cpp
+    src/collectors/NetflowUdpCollector.cpp
+    src/collectors/NetflowV9UdpCollector.cpp
 
     src/parsers/ZeekParser.cpp
     src/parsers/SuricataParser.cpp
-
-    src/collectors/NetflowUdpCollector.cpp
     src/parsers/NetflowV5Parser.cpp
+    src/parsers/NetflowV9Parser.cpp
 )
 
 target_include_directories(flow_collector PRIVATE

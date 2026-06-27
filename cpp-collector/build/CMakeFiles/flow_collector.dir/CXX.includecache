@@ -38,6 +38,18 @@ core/ISink.hpp
 parsers/NetflowV5Parser.hpp
 ../include/collectors/parsers/NetflowV5Parser.hpp
 
+../include/collectors/NetflowV9UdpCollector.hpp
+QObject
+-
+QUdpSocket
+-
+core/ICollector.hpp
+../include/collectors/core/ICollector.hpp
+core/ISink.hpp
+../include/collectors/core/ISink.hpp
+parsers/NetflowV9Parser.hpp
+../include/collectors/parsers/NetflowV9Parser.hpp
+
 ../include/core/ICollector.hpp
 
 ../include/core/ISink.hpp
@@ -59,6 +71,16 @@ QVector
 -
 model/NormalizedFlow.hpp
 -
+
+../include/parsers/NetflowV9Parser.hpp
+QByteArray
+-
+QHash
+-
+QVector
+-
+model/NormalizedFlow.hpp
+../include/parsers/model/NormalizedFlow.hpp
 
 ../include/parsers/SuricataParser.hpp
 QString
@@ -124,6 +146,18 @@ QNetworkDatagram
 QDebug
 -
 
+/home/quang/flowlog-system/cpp-collector/src/collectors/NetflowV9UdpCollector.cpp
+collectors/NetflowV9UdpCollector.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/collectors/NetflowV9UdpCollector.hpp
+QCoreApplication
+-
+QHostAddress
+-
+QNetworkDatagram
+-
+QDebug
+-
+
 /home/quang/flowlog-system/cpp-collector/src/main.cpp
 QCoreApplication
 -
@@ -139,6 +173,8 @@ collectors/FileCollector.hpp
 /home/quang/flowlog-system/cpp-collector/src/collectors/FileCollector.hpp
 collectors/NetflowUdpCollector.hpp
 /home/quang/flowlog-system/cpp-collector/src/collectors/NetflowUdpCollector.hpp
+collectors/NetflowV9UdpCollector.hpp
+/home/quang/flowlog-system/cpp-collector/src/collectors/NetflowV9UdpCollector.hpp
 
 /home/quang/flowlog-system/cpp-collector/src/model/NormalizedFlow.cpp
 model/NormalizedFlow.hpp
@@ -150,6 +186,16 @@ parsers/NetflowV5Parser.hpp
 QJsonObject
 -
 QString
+-
+
+/home/quang/flowlog-system/cpp-collector/src/parsers/NetflowV9Parser.cpp
+parsers/NetflowV9Parser.hpp
+/home/quang/flowlog-system/cpp-collector/src/parsers/parsers/NetflowV9Parser.hpp
+QJsonObject
+-
+QStringList
+-
+QDebug
 -
 
 /home/quang/flowlog-system/cpp-collector/src/parsers/SuricataParser.cpp
@@ -214,6 +260,10 @@ qfile.h
 qflags.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
+qhash.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QIODevice
 qiodevice.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
@@ -249,6 +299,10 @@ qshareddata.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 qstring.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
+qstringlist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
 qtextstream.h

@@ -204,6 +204,33 @@ src/collectors/NetflowUdpCollector.cpp.s:
 	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/NetflowUdpCollector.cpp.s
 .PHONY : src/collectors/NetflowUdpCollector.cpp.s
 
+src/collectors/NetflowV9UdpCollector.o: src/collectors/NetflowV9UdpCollector.cpp.o
+
+.PHONY : src/collectors/NetflowV9UdpCollector.o
+
+# target to build an object file
+src/collectors/NetflowV9UdpCollector.cpp.o:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/NetflowV9UdpCollector.cpp.o
+.PHONY : src/collectors/NetflowV9UdpCollector.cpp.o
+
+src/collectors/NetflowV9UdpCollector.i: src/collectors/NetflowV9UdpCollector.cpp.i
+
+.PHONY : src/collectors/NetflowV9UdpCollector.i
+
+# target to preprocess a source file
+src/collectors/NetflowV9UdpCollector.cpp.i:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/NetflowV9UdpCollector.cpp.i
+.PHONY : src/collectors/NetflowV9UdpCollector.cpp.i
+
+src/collectors/NetflowV9UdpCollector.s: src/collectors/NetflowV9UdpCollector.cpp.s
+
+.PHONY : src/collectors/NetflowV9UdpCollector.s
+
+# target to generate assembly for a file
+src/collectors/NetflowV9UdpCollector.cpp.s:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/collectors/NetflowV9UdpCollector.cpp.s
+.PHONY : src/collectors/NetflowV9UdpCollector.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -284,6 +311,33 @@ src/parsers/NetflowV5Parser.s: src/parsers/NetflowV5Parser.cpp.s
 src/parsers/NetflowV5Parser.cpp.s:
 	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/NetflowV5Parser.cpp.s
 .PHONY : src/parsers/NetflowV5Parser.cpp.s
+
+src/parsers/NetflowV9Parser.o: src/parsers/NetflowV9Parser.cpp.o
+
+.PHONY : src/parsers/NetflowV9Parser.o
+
+# target to build an object file
+src/parsers/NetflowV9Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/NetflowV9Parser.cpp.o
+.PHONY : src/parsers/NetflowV9Parser.cpp.o
+
+src/parsers/NetflowV9Parser.i: src/parsers/NetflowV9Parser.cpp.i
+
+.PHONY : src/parsers/NetflowV9Parser.i
+
+# target to preprocess a source file
+src/parsers/NetflowV9Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/NetflowV9Parser.cpp.i
+.PHONY : src/parsers/NetflowV9Parser.cpp.i
+
+src/parsers/NetflowV9Parser.s: src/parsers/NetflowV9Parser.cpp.s
+
+.PHONY : src/parsers/NetflowV9Parser.s
+
+# target to generate assembly for a file
+src/parsers/NetflowV9Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/flow_collector.dir/build.make CMakeFiles/flow_collector.dir/src/parsers/NetflowV9Parser.cpp.s
+.PHONY : src/parsers/NetflowV9Parser.cpp.s
 
 src/parsers/SuricataParser.o: src/parsers/SuricataParser.cpp.o
 
@@ -384,6 +438,9 @@ help:
 	@echo "... src/collectors/NetflowUdpCollector.o"
 	@echo "... src/collectors/NetflowUdpCollector.i"
 	@echo "... src/collectors/NetflowUdpCollector.s"
+	@echo "... src/collectors/NetflowV9UdpCollector.o"
+	@echo "... src/collectors/NetflowV9UdpCollector.i"
+	@echo "... src/collectors/NetflowV9UdpCollector.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -393,6 +450,9 @@ help:
 	@echo "... src/parsers/NetflowV5Parser.o"
 	@echo "... src/parsers/NetflowV5Parser.i"
 	@echo "... src/parsers/NetflowV5Parser.s"
+	@echo "... src/parsers/NetflowV9Parser.o"
+	@echo "... src/parsers/NetflowV9Parser.i"
+	@echo "... src/parsers/NetflowV9Parser.s"
 	@echo "... src/parsers/SuricataParser.o"
 	@echo "... src/parsers/SuricataParser.i"
 	@echo "... src/parsers/SuricataParser.s"
