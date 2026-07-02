@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ArpParser.hpp
+cstdint
+-
+optional
+-
+string
+-
+AssetEvent.hpp
+../include/AssetEvent.hpp
+
+../include/AssetEvent.hpp
+string
+-
+nlohmann/json.hpp
+-
+
+../include/HttpClient.hpp
+string
+-
+vector
+-
+AssetEvent.hpp
+../include/AssetEvent.hpp
+
+/home/quang/flowlog-system/passive-asset-discovery/collector-cpp/src/main.cpp
+pcap.h
+-
+csignal
+-
+iostream
+-
+string
+-
+ArpParser.hpp
+/home/quang/flowlog-system/passive-asset-discovery/collector-cpp/src/ArpParser.hpp
+HttpClient.hpp
+/home/quang/flowlog-system/passive-asset-discovery/collector-cpp/src/HttpClient.hpp
+
