@@ -117,7 +117,7 @@ def list_assets(
         first_seen,
         last_seen,
         last_source
-    FROM assets_latest
+    FROM assets_latest FINAL
     {where_sql}
     ORDER BY last_seen DESC
     LIMIT {limit}
@@ -179,7 +179,7 @@ def list_asset_events(
 
 @app.get("/api/v1/assets/summary")
 def asset_summary():
-    total_assets = ch_query("SELECT count() FROM assets_latest").strip()
+    total_assets = ch_query("SELECT count() FROM assets_latest FINAL").strip()
     total_events = ch_query("SELECT count() FROM asset_events").strip()
     unique_ips = ch_query("SELECT uniqExact(ip) FROM asset_events").strip()
     unique_macs = ch_query("SELECT uniqExact(mac) FROM asset_events WHERE mac != ''").strip()
